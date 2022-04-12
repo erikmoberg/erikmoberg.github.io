@@ -1,7 +1,7 @@
 export class SlideView extends HTMLElement {
 
     _slide = null;
-    
+
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
@@ -47,7 +47,7 @@ export class SlideView extends HTMLElement {
   }
 </style>
 <section>
-  ${val.header ? `<h1>${val.header}</h1>` : ``}
+  ${val.options?.hideHeader ? `` : `<h1>${val.header}</h1>`}
   ${val.body}
 </section>`;
       }

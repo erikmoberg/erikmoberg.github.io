@@ -2,8 +2,13 @@ import { SlideView } from './SlideView.js';
 import { SlideService } from '../services/SlideService.js';
 import { NumberHelper } from '../utils/NumberHelper.js';
 import { SlideUrlHelper } from '../utils/SlideUrlHelper.js'
+import { ServiceLocator } from '../crossCutting/ServiceLocator.js'
 
 class SlidePresenter extends HTMLElement {
+
+    originalFontSize = 2.5;
+    fontUnit = 'vw';
+    fontSize = this.originalFontSize;
 
     currentSlideIndex = 0;
     slideViews = [];
@@ -28,8 +33,11 @@ class SlidePresenter extends HTMLElement {
     }
 
     async connectedCallback() {
-        this.slides = await SlideService.getSlides();
-        this.currentSlideIndex = Math.max(0, Math.min(this.slides.length - 1, SlideUrlHelper.getSlideIndex()));
+        const serviceLocator = new ServiceLocator(true);
+        const slideService = serviceLocator.resolve(SlideService.name)
+        this.updateFontSize();
+        this.slides = await slideService.getSlides();
+        this.currentSlideIndex = SlideUrlHelper.getSlideIndex(this.slides);
         this.render();
         this.addEventListeners();
     }
@@ -52,16 +60,28 @@ class SlidePresenter extends HTMLElement {
         const view = this.slideViews[this.currentSlideIndex];
         view.classList.add('visible');
         view.scrollIntoView({behavior: 'smooth'});
-        SlideUrlHelper.setSlideIndex(this.currentSlideIndex, view.slide.header);
+        SlideUrlHelper.setSlideIndex(this.currentSlideIndex, view.slide.label);
     }
+
+    updateFontSize() {
+        document.body.style.fontSize = this.fontSize + this.fontUnit;
+    };
 
     addEventListeners() {
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowLeft') {
                 this.skipSlide(-1);
-            }
-            else if (e.key === 'ArrowRight') {
+            } else if (e.key === 'ArrowRight') {
                 this.skipSlide(1);
+            } else if (e.key === 'ArrowUp') {
+                this.fontSize += 0.1;
+                this.updateFontSize();
+            } else if (e.key === 'ArrowDown') {
+                this.fontSize -= 0.1;
+                this.updateFontSize();
+            } else if (e.key === '0') {
+                this.fontSize = this.originalFontSize;
+                this.updateFontSize();
             }
         });
 

@@ -1,25 +1,26 @@
-import { SlideModel } from '../models/SlideModel.js'
+import { SlideEntity } from '../models/SlideEntity.js'
 
 export class SlideRepository {
     constructor() {
     }
 
-    static async getSlides() {
+    async getSlides() {
         return [
-            new SlideModel(`You may not need NPM`, 
+            new SlideEntity(`You may not need NPM`, 
                 `<p>And other lies I keep telling myself</p>`),
             
-            new SlideModel(`Well-factored code without build tools`, `
+            new SlideEntity(`Well-factored code without build tools`, `
                 <p>With modules, we can factor code as we see fit</p>
                 <p>The browser is our build tool</p>`),
 
-            new SlideModel(`Web components`, `
+            new SlideEntity(`Web components`, `
                 <p>Components the standards way</p>`),
 
-            new SlideModel(``, `
-                <img src="images/image.png" />`),
+            new SlideEntity(`My image`, `
+                <img src="images/image.png" />`,
+                { hideHeader: true }),
 
-            new SlideModel(`The end`, `
+            new SlideEntity(`The end`, `
                 <p>End</p>`),
         ];
     }
