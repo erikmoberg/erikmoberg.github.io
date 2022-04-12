@@ -1,11 +1,12 @@
 import { SlideView } from './SlideView.js';
 import { SlideService } from '../services/SlideService.js';
 import { NumberHelper } from '../utils/NumberHelper.js';
+import { SlideUrlHelper } from '../utils/SlideUrlHelper.js'
 
-class SlidePresentation extends HTMLElement {
+class SlidePresenter extends HTMLElement {
 
     currentSlideIndex = 0;
-
+    slideViews = [];
     styles = `
 <style>
   :host {
@@ -28,7 +29,7 @@ class SlidePresentation extends HTMLElement {
 
     async connectedCallback() {
         this.slides = await SlideService.getSlides();
-        this.currentSlideIndex = Math.max(0, Math.min(this.slides.length - 1, SlideService.getSlideIndexFromUrl()));
+        this.currentSlideIndex = Math.max(0, Math.min(this.slides.length - 1, SlideUrlHelper.getSlideIndex()));
         this.render();
         this.addEventListeners();
     }
@@ -51,7 +52,7 @@ class SlidePresentation extends HTMLElement {
         const view = this.slideViews[this.currentSlideIndex];
         view.classList.add('visible');
         view.scrollIntoView({behavior: 'smooth'});
-        window.history.pushState(null, view.slide.header, '/#' + this.currentSlideIndex);
+        SlideUrlHelper.setSlideIndex(this.currentSlideIndex, view.slide.header);
     }
 
     addEventListeners() {
@@ -70,4 +71,4 @@ class SlidePresentation extends HTMLElement {
     }
 }
 
-customElements.define('slide-presentation', SlidePresentation);
+customElements.define('slide-presenter', SlidePresenter);
