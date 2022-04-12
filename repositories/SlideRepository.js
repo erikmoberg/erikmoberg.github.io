@@ -1,4 +1,4 @@
-import { SlideModel } from './SlideModel.js'
+import { SlideModel } from '../domain/SlideModel.js'
 
 export class SlideRepository {
     constructor() {

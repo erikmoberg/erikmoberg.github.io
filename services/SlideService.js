@@ -1,4 +1,4 @@
-import { SlideRepository } from './SlideRepository.js'
+import { SlideRepository } from '../repositories/SlideRepository.js'
 
 export class SlideService {
     constructor() {

@@ -1,6 +1,6 @@
 import { SlideView } from './SlideView.js';
-import { SlideService } from './SlideService.js';
-import { NumberHelper } from './NumberHelper.js';
+import { SlideService } from '../services/SlideService.js';
+import { NumberHelper } from '../utils/NumberHelper.js';
 
 class SlidePresentation extends HTMLElement {
 
