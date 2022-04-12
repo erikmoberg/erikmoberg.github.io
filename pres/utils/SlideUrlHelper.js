@@ -10,6 +10,6 @@ export class SlideUrlHelper {
     }
 
     static setSlideIndex(index, label) {
-        window.history.pushState(null, '', '/#' + label);
+        window.history.pushState(null, '', '#' + label);
     }
 }
