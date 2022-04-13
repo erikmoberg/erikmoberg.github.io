@@ -1,4 +1,4 @@
-import { SlideEntity } from '../models/SlideEntity.js'
+import { SlideEntity } from '../models/slide-entity.js'
 
 export class SlideRepository {
     constructor() {

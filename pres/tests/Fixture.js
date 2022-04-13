@@ -7,9 +7,9 @@ export class Fixture {
         this.tests.push(fn);
     }
 
-    run() {
+    async run() {
         for (const test of this.tests) {
-            test();
+            await test();
         }
     }
 
@@ -19,5 +19,9 @@ export class Fixture {
         } else {
             console.error(`Fail in ${desc}: Expected ${expected}, got ${actual}`);
         }
+    }
+
+    success(desc) {
+        this.equal(1, 1, desc);
     }
 }

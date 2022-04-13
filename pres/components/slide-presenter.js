@@ -1,8 +1,8 @@
-import { SlideView } from './SlideView.js';
-import { SlideService } from '../services/SlideService.js';
-import { NumberHelper } from '../utils/NumberHelper.js';
-import { SlideUrlHelper } from '../utils/SlideUrlHelper.js'
-import { ServiceLocator } from '../crossCutting/ServiceLocator.js'
+import { SlideView } from './slide-view.js';
+import { SlideService } from '../services/slide-service.js';
+import { NumberHelper } from '../utils/number-helper.js';
+import { SlideUrlHelper } from '../utils/slide-url-helper.js'
+import { ServiceLocator } from '../cross-cutting/service-locator.js'
 
 class SlidePresenter extends HTMLElement {
 

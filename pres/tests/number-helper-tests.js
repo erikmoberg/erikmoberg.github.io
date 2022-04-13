@@ -1,4 +1,4 @@
-import { NumberHelper } from '../utils/NumberHelper.js'
+import { NumberHelper } from '../utils/number-helper.js'
 import { Fixture } from './Fixture.js'
 
 export class NumberHelperTests extends Fixture {

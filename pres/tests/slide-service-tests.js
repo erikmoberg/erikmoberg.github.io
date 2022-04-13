@@ -1,7 +1,7 @@
-import { SlideModel } from '../models/SlideModel.js';
-import { SlideRepository } from '../repositories/SlideRepository.js';
-import { ServiceLocator } from '../crossCutting/ServiceLocator.js';
-import { SlideService } from '../services/SlideService.js'
+import { SlideModel } from '../models/slide-model.js';
+import { SlideRepository } from '../repositories/slide-repository.js';
+import { ServiceLocator } from '../cross-cutting/service-locator.js';
+import { SlideService } from '../services/slide-service.js'
 import { Fixture } from './Fixture.js'
 
 export class SlideServiceTests extends Fixture {

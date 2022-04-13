@@ -1,5 +1,5 @@
-import { SlideModel } from '../models/SlideModel.js';
-import { SlideRepository } from '../repositories/SlideRepository.js'
+import { SlideModel } from '../models/slide-model.js';
+import { SlideRepository } from '../repositories/slide-repository.js'
 
 export class SlideService {
     constructor(serviceLocator) {
