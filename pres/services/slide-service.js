@@ -12,6 +12,8 @@ export class SlideService {
     }
 
     buildLabel (header) {
-        return header.toLowerCase().replace(/ /g, '-')
+        return header.toLowerCase()
+            .replace(/ /g, '-')
+            .replace(/[^A-Za-z0-9\-]/g, '')
     }
 }
