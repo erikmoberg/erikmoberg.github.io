@@ -1,7 +1,13 @@
 export class SlideEntity {
-    constructor (header, body, options) {
+    /**
+     * 
+     * @param {string} header 
+     * @param {string} content 
+     * @param {*} options 
+     */
+    constructor (header, content, options) {
         this.header = header;
-        this.body = body;
+        this.content = content;
         this.options = options;
     }
 }

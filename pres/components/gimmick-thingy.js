@@ -36,5 +36,3 @@ export class GimmickThingy extends HTMLElement {
     });
   }
 }
-
-customElements.define('gimmick-thingy', GimmickThingy);

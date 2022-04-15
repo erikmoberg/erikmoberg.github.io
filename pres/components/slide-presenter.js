@@ -1,10 +1,9 @@
-import { SlideView } from './slide-view.js';
 import { SlideService } from '../services/slide-service.js';
 import { NumberHelper } from '../utils/number-helper.js';
 import { SlideUrlHelper } from '../utils/slide-url-helper.js'
 import { ServiceLocator } from '../cross-cutting/service-locator.js'
 
-class SlidePresenter extends HTMLElement {
+export class SlidePresenter extends HTMLElement {
 
     originalFontSize = 2.5;
     fontUnit = 'vw';
@@ -33,8 +32,7 @@ class SlidePresenter extends HTMLElement {
     }
 
     async connectedCallback() {
-        const serviceLocator = new ServiceLocator(true);
-        const slideService = serviceLocator.resolve(SlideService.name)
+        const slideService = ServiceLocator.resolve(SlideService.name)
         this.updateFontSize();
         this.slides = await slideService.getSlides();
         this.currentSlideIndex = SlideUrlHelper.getSlideIndex(this.slides);
@@ -60,7 +58,7 @@ class SlidePresenter extends HTMLElement {
         const view = this.slideViews[this.currentSlideIndex];
         view.classList.add('visible');
         view.scrollIntoView({behavior: 'smooth'});
-        SlideUrlHelper.setSlideIndex(this.currentSlideIndex, view.slide.label);
+        SlideUrlHelper.setUrl(view.slide.label);
     }
 
     updateFontSize() {
@@ -90,5 +88,3 @@ class SlidePresenter extends HTMLElement {
         });
     }
 }
-
-customElements.define('slide-presenter', SlidePresenter);

@@ -9,7 +9,7 @@ export class SlideUrlHelper {
         return 0;
     }
 
-    static setSlideIndex(index, label) {
+    static setUrl(label) {
         window.history.pushState(null, '', '#' + label);
     }
 }

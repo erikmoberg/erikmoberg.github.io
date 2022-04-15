@@ -3,6 +3,7 @@ import { SlideRepository } from '../repositories/slide-repository.js';
 import { ServiceLocator } from '../cross-cutting/service-locator.js';
 import { SlideService } from '../services/slide-service.js'
 import { Fixture } from './Fixture.js'
+import { SlideEntity } from '../models/slide-entity.js';
 
 export class SlideServiceTests extends Fixture {
 
@@ -10,9 +11,8 @@ export class SlideServiceTests extends Fixture {
         super();
 
         this.test(async () => {
-            const serviceLocator = new ServiceLocator();
-            serviceLocator.register(function(){ this.getSlides = () => [ new SlideModel('header', 'body') ] }, SlideRepository.name)
-            const slideService = new SlideService(serviceLocator);
+            const fakeSlideRepository = { getSlides: () => [ new SlideEntity('header', 'body') ] };
+            const slideService = new SlideService(fakeSlideRepository);
             
             const result = await slideService.getSlides();
             

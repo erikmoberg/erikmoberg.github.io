@@ -1,6 +1,6 @@
 export class SlideView extends HTMLElement {
 
-    _slide = null;
+    #slide = null;
 
     constructor() {
         super();
@@ -8,7 +8,7 @@ export class SlideView extends HTMLElement {
     }
 
     set slide(val) {
-        this._slide = val;
+        this.#slide = val;
         this.shadowRoot.innerHTML = `
 <style>
   :host {
@@ -45,6 +45,13 @@ export class SlideView extends HTMLElement {
     border-radius: 0.5rem;
     box-shadow: 0 0 0.5rem black;
   }
+
+  code {
+    background-color: #1e1e1e;
+    color: #abb2bf;
+    padding: 1rem;
+    font-size: 75%;
+  }
 </style>
 <section>
   ${val.options?.hideHeader ? `` : `<h1>${val.header}</h1>`}
@@ -53,8 +60,7 @@ export class SlideView extends HTMLElement {
       }
 
     get slide() {
-        return this._slide;
+        return this.#slide;
     }
 }
 
-customElements.define('slide-view', SlideView);
