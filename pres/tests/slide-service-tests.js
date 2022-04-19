@@ -1,9 +1,7 @@
-import { SlideModel } from '../models/slide-model.js';
-import { SlideRepository } from '../repositories/slide-repository.js';
-import { ServiceLocator } from '../cross-cutting/service-locator.js';
 import { SlideService } from '../services/slide-service.js'
 import { Fixture } from './Fixture.js'
 import { SlideEntity } from '../models/slide-entity.js';
+import { PresentationEntity } from '../models/presentation-entity.js';
 
 export class SlideServiceTests extends Fixture {
 
@@ -11,14 +9,15 @@ export class SlideServiceTests extends Fixture {
         super();
 
         this.test(async () => {
-            const fakeSlideRepository = { getSlides: () => [ new SlideEntity('header', 'body') ] };
+            const fakeSlideRepository = { getSlides: () => new PresentationEntity('title', [ new SlideEntity('header', ['body']) ]) };
             const slideService = new SlideService(fakeSlideRepository);
             
             const result = await slideService.getSlides();
             
-            this.equal(1, result.length, 'getSlides should return a collection');
-            this.equal('header', result[0].header, 'getSlides should fill header');
-            this.equal('body', result[0].body, 'getSlides should fill body');
+            this.equal('title', result.title, 'getSlides should return a title');
+            this.equal(1, result.slides.length, 'getSlides should return a collection');
+            this.equal('header', result.slides[0].header, 'getSlides should fill header');
+            this.equal('body', result.slides[0].body, 'getSlides should fill body');
         });
     }
 }

@@ -1,4 +1,4 @@
-import { SlideEntity } from "./slide-entity";
+import { SlideEntity } from "./slide-entity.js";
 
 export class PresentationEntity {
     /**
