@@ -17,7 +17,7 @@
         },
         {
             "header": "My image",
-            "content": ["<img src=\"images/image.png\" />"],
+            "content": ["<img src=\"web/images/image.png\" />"],
             "hideHeader": true
         },
         {

@@ -24,7 +24,7 @@ export class GimmickThingy extends HTMLElement {
         display: block;
       }
       </style>
-      <img src="images/surprise.jpg" />`;
+      <img src="web/images/surprise.jpg" />`;
       this.addEventListeners();
   }
 

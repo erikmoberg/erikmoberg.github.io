@@ -1,4 +1,4 @@
-import { Config } from "../cross-cutting/config.js";
+import { Config } from "../../core/cross-cutting/config.js";
 import { HttpAdapter } from "./http-adapter.js";
 
 export class SlideRepository {

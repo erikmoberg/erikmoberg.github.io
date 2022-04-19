@@ -1,6 +1,6 @@
 import { PresentationModel } from '../models/presentation-model.js';
 import { SlideModel } from '../models/slide-model.js';
-import { SlideRepository } from '../repositories/slide-repository.js';
+import { SlideRepository } from '../../infrastructure/repositories/slide-repository.js';
 import { SlideUrlHelper } from '../utils/slide-url-helper.js';
 
 export class SlideService {

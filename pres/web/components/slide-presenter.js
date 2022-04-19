@@ -1,7 +1,7 @@
-import { SlideService } from '../services/slide-service.js';
-import { NumberHelper } from '../utils/number-helper.js';
-import { SlideUrlHelper } from '../utils/slide-url-helper.js'
-import { ServiceLocator } from '../cross-cutting/service-locator.js'
+import { SlideService } from '../../core/services/slide-service.js';
+import { NumberHelper } from '../../core/utils/number-helper.js';
+import { SlideUrlHelper } from '../../core/utils/slide-url-helper.js'
+import { ServiceLocator } from '../../core/cross-cutting/service-locator.js'
 
 export class SlidePresenter extends HTMLElement {
 

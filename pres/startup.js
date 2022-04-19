@@ -1,11 +1,11 @@
-import { SlidePresenter } from './components/slide-presenter.js'
-import { GimmickThingy } from './components/gimmick-thingy.js'
-import { ServiceLocator } from './cross-cutting/service-locator.js'
-import { SlideService } from './services/slide-service.js';
-import { SlideRepository } from './repositories/slide-repository.js';
-import { HttpAdapter } from './repositories/http-adapter.js';
-import { Config } from './cross-cutting/config.js';
-import { SlideView } from './components/slide-view.js';
+import { SlidePresenter } from './web/components/slide-presenter.js'
+import { GimmickThingy } from './web/components/gimmick-thingy.js'
+import { SlideView } from './web/components/slide-view.js';
+import { ServiceLocator } from './core/cross-cutting/service-locator.js'
+import { SlideService } from './core/services/slide-service.js';
+import { SlideRepository } from './infrastructure/repositories/slide-repository.js';
+import { HttpAdapter } from './infrastructure/repositories/http-adapter.js';
+import { Config } from './core/cross-cutting/config.js';
 
 // register services
 ServiceLocator.register(SlideService.name, () => new SlideService(ServiceLocator.resolve(SlideRepository.name)));

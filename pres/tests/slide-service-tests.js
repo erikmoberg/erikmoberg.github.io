@@ -1,7 +1,7 @@
-import { SlideService } from '../services/slide-service.js'
+import { SlideService } from '../core/services/slide-service.js'
 import { Fixture } from './Fixture.js'
-import { SlideEntity } from '../models/slide-entity.js';
-import { PresentationEntity } from '../models/presentation-entity.js';
+import { SlideEntity } from '../infrastructure/entities/slide-entity.js';
+import { PresentationEntity } from '../infrastructure/entities/presentation-entity.js';
 
 export class SlideServiceTests extends Fixture {
 

@@ -1,4 +1,4 @@
-import { SlideModel } from "../models/slide-model.js";
+import { SlideModel } from "../../core/models/slide-model.js";
 
 export class SlideView extends HTMLElement {
 
