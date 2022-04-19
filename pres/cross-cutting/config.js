@@ -1,5 +1,5 @@
 export class Config {
-    #apiBaseUrl = "_api";
+    #apiBaseUrl = "api";
     get apiBaseUrl() {
         return this.#apiBaseUrl;
     }
