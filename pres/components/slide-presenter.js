@@ -5,11 +5,29 @@ import { ServiceLocator } from '../cross-cutting/service-locator.js'
 
 export class SlidePresenter extends HTMLElement {
 
+    /**
+     * @type {number}
+     */
     originalFontSize = 2.5;
+
+    /**
+     * @type {string}
+     */
     fontUnit = 'vw';
+
+    /**
+     * @type {number}
+     */
     fontSize = this.originalFontSize;
 
+    /**
+     * @type {number}
+     */
     currentSlideIndex = 0;
+
+    /**
+     * @type {HTMLElement[]}
+     */
     slideViews = [];
     styles = `
 <style>

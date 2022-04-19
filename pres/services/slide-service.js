@@ -1,5 +1,6 @@
 import { SlideModel } from '../models/slide-model.js';
 import { SlideRepository } from '../repositories/slide-repository.js';
+import { SlideUrlHelper } from '../utils/slide-url-helper.js';
 
 export class SlideService {
     /**
@@ -15,8 +16,9 @@ export class SlideService {
      * @returns {SlideModel[]}
      */
     async getSlides() {
-        const slides = await this.slideRepository.getSlides();
-        return slides.map(s => new SlideModel(s.header, s.content, this.buildLabel(s.header), s.options));
+        const presentation = SlideUrlHelper.getPresentation() ?? 'stackless';
+        const slides = await this.slideRepository.getSlides(presentation);
+        return slides.map(s => new SlideModel(s.header, s.content.join(''), this.buildLabel(s.header), s.hideHeader));
     }
 
     /**

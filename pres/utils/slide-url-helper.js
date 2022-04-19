@@ -12,4 +12,8 @@ export class SlideUrlHelper {
     static setUrl(label) {
         window.history.pushState(null, '', '#' + label);
     }
+
+    static getPresentation() {
+        return new URLSearchParams(window.location.search).get('presentation');
+    }
 }

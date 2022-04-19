@@ -2,12 +2,12 @@ export class SlideEntity {
     /**
      * 
      * @param {string} header 
-     * @param {string} content 
-     * @param {*} options 
+     * @param {string[]} content 
+     * @param {boolean} hideHeader 
      */
-    constructor (header, content, options) {
+    constructor (header, content, hideHeader) {
         this.header = header;
         this.content = content;
-        this.options = options;
+        this.hideHeader = hideHeader;
     }
 }
