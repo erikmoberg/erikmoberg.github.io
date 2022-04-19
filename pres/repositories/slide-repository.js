@@ -18,6 +18,6 @@ export class SlideRepository {
      * @returns {SlideEntity[]} A list of slides.
      */
     async getSlides(presentation) {
-        return this.httpAdapter.getJson(`${this.config.apiBaseUrl}/${presentation}.json`);
+        return this.httpAdapter.getJson(`${this.config.apiBaseUrl}/${presentation}.js`);
     }
 }
