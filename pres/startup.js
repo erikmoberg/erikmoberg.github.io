@@ -8,7 +8,7 @@ import { HttpAdapter } from './infrastructure/repositories/http-adapter.js';
 import { Config } from './core/cross-cutting/config.js';
 
 // register services
-ServiceLocator.register(SlideService.name, () => new SlideService(ServiceLocator.resolve(SlideRepository.name)));
+ServiceLocator.register(SlideService.name, () => new SlideService(ServiceLocator.resolve(SlideRepository.name), ServiceLocator.resolve(Config.name)));
 ServiceLocator.register(SlideRepository.name, () => new SlideRepository(ServiceLocator.resolve(HttpAdapter.name), ServiceLocator.resolve(Config.name)));
 ServiceLocator.register(HttpAdapter.name, () => new HttpAdapter());
 ServiceLocator.register(Config.name, () => new Config());
