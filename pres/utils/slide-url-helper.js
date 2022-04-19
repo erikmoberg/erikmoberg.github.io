@@ -13,7 +13,7 @@ export class SlideUrlHelper {
         window.history.pushState(null, '', '#' + label);
     }
 
-    static getPresentation() {
+    static getPresentationName() {
         return new URLSearchParams(window.location.search).get('presentation');
     }
 }

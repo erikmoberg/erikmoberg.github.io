@@ -1,3 +1,4 @@
+import { PresentationModel } from '../models/presentation-model.js';
 import { SlideModel } from '../models/slide-model.js';
 import { SlideRepository } from '../repositories/slide-repository.js';
 import { SlideUrlHelper } from '../utils/slide-url-helper.js';
@@ -13,12 +14,13 @@ export class SlideService {
 
     /**
      * 
-     * @returns {SlideModel[]}
+     * @returns {PresentationModel}
      */
     async getSlides() {
-        const presentation = SlideUrlHelper.getPresentation() ?? 'stackless';
-        const slides = await this.slideRepository.getSlides(presentation);
-        return slides.map(s => new SlideModel(s.header, s.content.join(''), this.buildLabel(s.header), s.hideHeader));
+        const presentationName = SlideUrlHelper.getPresentationName() ?? 'woz';
+        const presentation = await this.slideRepository.getSlides(presentationName);
+        const slides = presentation.slides.map(s => new SlideModel(s.header, s.content.join(''), this.buildLabel(s.header), s.hideHeader));
+        return new PresentationModel(presentation.title, slides);
     }
 
     /**

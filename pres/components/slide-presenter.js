@@ -50,9 +50,11 @@ export class SlidePresenter extends HTMLElement {
     }
 
     async connectedCallback() {
-        const slideService = ServiceLocator.resolve(SlideService.name)
+        const slideService = ServiceLocator.resolve(SlideService.name);
         this.updateFontSize();
-        this.slides = await slideService.getSlides();
+        const presentation = await slideService.getSlides();
+        this.slides = presentation.slides;
+        document.title = presentation.title;
         this.currentSlideIndex = SlideUrlHelper.getSlideIndex(this.slides);
         this.render();
         this.addEventListeners();
