@@ -11,9 +11,10 @@
         },
         {
             "header": "Purpose",
-            "content": ["<p>Validate requirements</p>",
-                        "<p>Fake things</p>",
-                        "<p>Etc.</p>"]
+            "content": ["<ul><li>Validate requirements</li>",
+                        "<li>Fake things</li>",
+                        "<li>Etc.</li></ul>"],
+            "style": "light"
         },
         {
             "header": "My image",

@@ -33,7 +33,7 @@ export class SlideService {
     async getSlides() {
         const presentationName = SlideUrlHelper.getPresentationName() ?? this.#config.defaultPresentationName;
         const presentation = await this.#slideRepository.getSlides(presentationName);
-        const slides = presentation.slides.map(s => new SlideModel(s.header, s.content.join(''), this.buildLabel(s.header), s.hideHeader));
+        const slides = presentation.slides.map(s => new SlideModel(s.header, s.content.join(''), this.buildLabel(s.header), s.hideHeader, s.style));
         return new PresentationModel(presentation.title, slides);
     }
 

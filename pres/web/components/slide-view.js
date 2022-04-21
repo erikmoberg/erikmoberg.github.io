@@ -18,14 +18,25 @@ export class SlideView extends HTMLElement {
      */
     set slide(val) {
         this.#slide = val;
+        if (val.style) {
+            this.shadowRoot.host.classList.add(val.style);
+        }
+
         this.shadowRoot.innerHTML = `
 <style>
   :host {
+    background-color: var(--dark);
+    color: var(--light);
     height: 100vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  :host(.light) {
+    background-color: var(--light);
+    color: var(--dark);
   }
 
   section {
@@ -56,10 +67,13 @@ export class SlideView extends HTMLElement {
   }
 
   img {
-    max-width: 95vw;
-    max-height: 95vh;
     border-radius: var(--border-radius);
     box-shadow: 0 0 0.5rem black;
+    height: 75vh;
+  }
+
+  section.hidden-header img {
+    height: 95vh;
   }
 
   code {
@@ -70,7 +84,7 @@ export class SlideView extends HTMLElement {
     border-radius: var(--border-radius);
   }
 </style>
-<section>
+<section class="${val.hideHeader ? `hidden-header` : ``}">
   ${val.hideHeader ? `` : `<h1>${val.header}</h1>`}
   ${val.body}
 </section>`;

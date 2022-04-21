@@ -1,4 +1,5 @@
 import { Config } from "../../core/cross-cutting/config.js";
+import { PresentationEntity } from "../entities/presentation-entity.js";
 import { HttpAdapter } from "./http-adapter.js";
 
 export class SlideRepository {
