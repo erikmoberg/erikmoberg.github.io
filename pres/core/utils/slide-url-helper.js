@@ -10,7 +10,9 @@ export class SlideUrlHelper {
     }
 
     static setUrl(label) {
-        window.history.pushState(null, '', '#' + label);
+        if (label !== window.location.hash.slice(1)) {
+            window.history.pushState(null, '', '#' + label);
+        }
     }
 
     static getPresentationName() {
