@@ -41,6 +41,7 @@ export class SlidePresenter extends HTMLElement {
 <style>
   :host {
     display: flex;
+    overflow-x: hidden;
   }
   slide-view {
     opacity: 0;

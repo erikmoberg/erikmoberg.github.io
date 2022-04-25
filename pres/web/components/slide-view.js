@@ -32,6 +32,7 @@ export class SlideView extends HTMLElement {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
   }
 
   :host(.light) {
@@ -69,11 +70,12 @@ export class SlideView extends HTMLElement {
   img {
     border-radius: var(--border-radius);
     box-shadow: 0 0 0.5rem black;
-    height: 75vh;
+    max-height: 75vh;
+    max-width: 95vw;
   }
 
   section.hidden-header img {
-    height: 95vh;
+    max-height: 95vh;
   }
 
   code {
