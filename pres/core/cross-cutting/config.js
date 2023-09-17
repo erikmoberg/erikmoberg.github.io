@@ -1,7 +1,7 @@
 export class Config {
     
     #apiBaseUrl = "api";
-    #defaultPresentationName = "woz";
+    #defaultPresentationName = "waterfall";
 
     get apiBaseUrl() {
         return this.#apiBaseUrl;

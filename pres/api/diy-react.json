@@ -1,0 +1,45 @@
+{
+    "title": "Web Technologies: Ecosystems",
+    "slides": [
+        {
+            "header": "Building our own JS framework",
+            "content": ["<p>Because knowledge</p>"]
+        },
+        {
+            "header": "Goal: Create a todo app",
+            "content": ["<p>Example: <a href=\"https://github.com/mborgbrant/react-todo\">mborgbrant/react-todo</a> (private repo)</p>",
+                        "<p>Presentation: <a href=\"https://docs.google.com/presentation/d/13HKzcrLPVpmzIYt-vFkN4awacX4byZfoP06WAp5zveA/edit#slide=id.g151267ff675_0_46\">Required features</a></p>"]
+        },
+        {
+            "header": "Concepts to discuss",
+            "content": ["<ul>",
+                          "<li>Project setup, build tools</li>",
+                          "<li>State + Rendering (and re-rendering)</li>",
+                          "<li>JSX/TSX handling</li>",
+                          "<li>React specifics: VDOM, hooks (useState, useEffect...)</li>",
+                        "</ul>"]
+        },
+        {
+            "header": "Mob programming",
+            "content": ["<ul>",
+                          "<li>Take turns at typing, 10 mins</li>",
+                          "<li>Before switch, push to branch: <a href=\"https://github.com/erikmoberg/cg-framework/tree/sessions/session-1\">sessions/session-1</a></li>",
+                          "<li>10 mins break each hour + short \"retro\"</li>",
+                        "</ul>"]
+        },
+        {
+            "header": "Plan for today",
+            "content": ["<ol>",
+                          "<li>Demo: Todo app</li>",
+                          "<li>Get everyone set up</li>",
+                          "<li>Decide roughly what to do</li>",
+                          "<li>Start coding</li>",
+                        "</ol>",
+                        "<h3>Success criteria: Have something that does something</h3>"]
+        },
+        {
+            "header": "Let's start!",
+            "content": []
+        }
+    ]
+}

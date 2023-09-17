@@ -22,6 +22,7 @@ export class SlideView extends HTMLElement {
             this.shadowRoot.host.classList.add(val.style);
         }
 
+        /* CSS */
         this.shadowRoot.innerHTML = `
 <style>
   :host {
@@ -40,6 +41,14 @@ export class SlideView extends HTMLElement {
     color: var(--dark);
   }
 
+  a {
+    color: var(--light);
+  }
+
+  :host(.light) a {
+    color: var(--dark);
+  }
+
   section {
     display: flex;
     align-items: center;
@@ -53,13 +62,18 @@ export class SlideView extends HTMLElement {
     margin: 0 0 5vh 0;
     padding: 0;
     text-align: center;
-    transition: transform 0.4s ease-in-out;
     transform: translateY(-10vh);
-    
+    transition: transform 1.5s ease-in-out;
+  }
+
+  :host(.light) h1 {
+    color: var(--dark-secondary);
   }
 
   :host(.visible) h1 {
     transform: translateY(0);
+    transition: transform 0.8s ease-in-out;
+    -moz-transition: -moz-transform 0.5s ease-in-out; /* Firefox animates faster than Chrome so we need to speed up the animation */
   }
 
   p {
@@ -67,11 +81,28 @@ export class SlideView extends HTMLElement {
     text-align: center;
   }
 
+  p.small {
+    font-size: 75%;
+  }
+
   img {
     border-radius: var(--border-radius);
     box-shadow: 0 0 0.5rem black;
-    max-height: 75vh;
+    max-height: 70vh;
     max-width: 95vw;
+  }
+
+  img.noborder {
+    box-shadow: none;
+  }
+
+  img.logo {
+    position: absolute;
+    left: 1vw;
+    bottom: 1vw;
+    width: 7vw;
+    box-shadow: none;
+    border-radius: 0;
   }
 
   section.hidden-header img {

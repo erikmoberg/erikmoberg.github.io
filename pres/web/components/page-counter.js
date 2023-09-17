@@ -23,23 +23,22 @@ export class PageCounter extends HTMLElement {
 <style>
   #page-number::before {
     content: "";
-    width: 2.5vw;
-    aspect-ratio: 1 / 1.8;
-    background: #05e273;
-    transform: skewY(-10deg);
+    width: 4vw;
+    aspect-ratio: 1 / 1;
+    background: var(--light-secondary);
     position: fixed;
-    bottom: -1vw;
-    right: 4vw;
+    bottom: 0;
+    right: 0;
     z-index: -1;
   }
   #page-number {
     font-size: 2vw;
     position: fixed;
-    bottom: 0.5vw;
-    right: 4vw;
+    bottom: 0.6vw;
+    right: 0.7vw;
     width: 2.5vw;
     text-align: center;
-    color: var(--dark);
+    color: var(--dark-secondary);
   }
 </style>
 <div id="page-number">${this.#pageNumber}</div>`;

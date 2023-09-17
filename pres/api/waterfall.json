@@ -1,0 +1,126 @@
+{
+    "title": "The Waterfall Model Does Not Exist",
+    "slides": [
+        {
+            "header": "The Waterfall Model Does Not Exist",
+            "content": [
+                "<p>At least not in the way you think</p>",
+                "<img class='logo' src='web/images/tretton37-logo-light.svg' />"
+            ]
+        },
+        {
+            "header": "What is the Waterfall Model?",
+            "content": ["<img src='web/images/duckduckgo.png' />"],
+            "hideHeader": true
+        },
+        {
+            "header": "A Typical Example",
+            "content": ["<p><img src='web/images/waterfall_model.png' /></p>"],
+            "hideHeader": true
+        },
+        {
+            "header": "Disadvantages - a Selection",
+            "content": [
+                "<ul>", 
+                    "<li><cite>Doesn't incorporate midprocess user or client feedback</cite></li>",
+                    "<li><cite>Delays testing until the end of the development lifecycle</cite></li>",
+                    "<li><cite>When a [design] flaw is found, the entire process often needs to start over</cite></li>",
+                "</ul>",
+                "<p><br><a href='https://www.techtarget.com/searchsoftwarequality/definition/waterfall-model'>TechTarget: Waterfall Model</a></p>"],
+            "style": "light"
+        },
+        {
+            "header": "Who is Royce??",
+            "content": ["<img src='web/images/royce.png' />"],
+            "hideHeader": true
+        },
+        {
+            "header": "Managing the Development of Large Software Systems, 1970",
+            "content": [
+                "<p class='small'>by Winston W. \"The Rocket Scientist\" Royce</p>",
+                "<p><br /></p>",
+                "<p>11 pages.<br />",
+                "Often cited as the original paper on the waterfall model.*</p>",
+                "<p><br /></p>",
+                "<p class='small'>*Never actually calls it the waterfall model.</p>"],
+            "style": "light"
+        },
+        {
+            "header": "Managing the Development of Large Software Systems, page 2",
+            "content": ["<img src='web/images/waterfall-2.png' />"],
+            "hideHeader": true
+        },
+        {
+            "header": "Quote",
+            "content": ["<p><cite>I believe in this concept, but the implementation described above is risky and invites failure.</cite></p><p class='small'>-- Winston W. Royce</p>"],
+            "hideHeader": true,
+            "style": "light"
+        },
+        {
+            "header": "Managing the Development of Large Software Systems, last page",
+            "content": ["<img src='web/images/waterfall-summary.png' />"],
+            "hideHeader": true
+        },
+        {
+            "header": "5 Points to Reduce Risk",
+            "content": [
+                "<ol>",
+                    "<li>Program design comes first</li>",
+                    "<li>Document the design</li>",
+                    "<li>Do it twice</li>",
+                    "<li>Plan, control, and monitor testing</li>",
+                    "<li>Involve the customer</li>",
+                "</ol>"
+            ]
+        },
+        {
+            "header": "Royce did not recommend the strict waterfall approach.",
+            "content": ["He used it as a strawman to explain why it doesn't work."],
+            "style": "light"
+        },
+        {
+            "header": "Maybe just TechTarget got it wrong?",
+            "content": ["Let's ask the bible."]
+        },
+        {
+            "header": "The Bible",
+            "content": ["<img src='web/images/pressman-fifth-ed-1.jpg' />"]
+        },
+        {
+            "header": "Third Edition, 1992",
+            "content": ["<img src='web/images/pressman-third-ed.png' />"]
+        },
+        {
+            "header": "Quotes",
+            "content": ["<img class='noborder' src='web/images/pressman-quotes.png' />"]
+        },
+        {
+            "header": "Fifth Edition, 2000",
+            "content": ["<img src='web/images/pressman-fifth-ed-2.jpg' />"]
+        },
+        {
+            "header": "They've been feeding us lies",
+            "content": ["<ol><li>Royce presents a strawman</li><li>Nobody reads past page 2</li><li>The strawman makes it into academia</li><li>Companies implement the strawman, believing it's best practice</li></ol>"],
+            "style": "light"
+        },
+        {
+            "header": "Takeaway #1",
+            "content": [
+                "<p>There has not been any \"growing criticism\" against the waterfall.</p>",
+                "<p class='small'>Its shortcomings were the point of the paper.</p>"
+            ]
+        },
+        {
+            "header": "Takeaway #2",
+            "content": ["<p>By mistake, Royce oversold the the idealized waterfall process by using a simple picture.</p><p class='small'>Not sure what the takeaway is here really :/</p>"]
+        },
+        {
+            "header": "Takeaway #3",
+            "content": ["<p>Check the source.</p><p>And try to make it past page 2.</p>"]
+        },
+        {
+            "header": "Discussion",
+            "content": ["<p>On obsolete software process models</p><p class='small'>Questions about sourdough bread also acceptable</p>"]
+        }
+    ]
+}

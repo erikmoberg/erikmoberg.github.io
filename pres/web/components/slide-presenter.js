@@ -37,6 +37,7 @@ export class SlidePresenter extends HTMLElement {
      */
     #counter = null;
 
+    /* CSS */
     styles = `
 <style>
   :host {
@@ -119,6 +120,10 @@ export class SlidePresenter extends HTMLElement {
 
         window.addEventListener('resize', () => {
             this.skipSlide(0);
+        });
+
+        document.addEventListener('click', (e) => {
+            e.clientX < window.innerWidth / 2 ? this.skipSlide(-1) : this.skipSlide(1);
         });
     }
 }
