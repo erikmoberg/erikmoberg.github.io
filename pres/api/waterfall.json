@@ -79,23 +79,37 @@
             "style": "light"
         },
         {
-            "header": "Maybe just TechTarget got it wrong?",
-            "content": ["Let's ask the bible."]
+            "header": "Conspiracy time",
+            "content": [
+                "<p>A recent misunderstanding?</p>",
+                "<p>Or: Was the waterfall intentionally misinterpreted to promote agile??</p>",
+                "<p><br />Let's ask the bible.</p>"
+            ]
         },
         {
             "header": "The Bible",
             "content": ["<img src='web/images/pressman-fifth-ed-1.jpg' />"]
         },
         {
-            "header": "Third Edition, 1992",
+            "header": "Pressman, 3rd ed., 1992 (1)",
+            "content": ["<img src='web/images/pressman-waterfall.png' />"]
+        },
+        {
+            "header": "Pressman, 3rd ed., 1992 (2)",
             "content": ["<img src='web/images/pressman-third-ed.png' />"]
         },
         {
-            "header": "Quotes",
-            "content": ["<img class='noborder' src='web/images/pressman-quotes.png' />"]
+            "header": "Pressman, 3rd ed., 1992 (3)",
+            "content": [
+        "<p><em>Over the past decade, criticism of the paradigm has caused even active supporters to question its applicability</em></p>",
+        "<p><em>A major blunder, if undetected until the working program is reviewed, can be distrastrous</em></p>",
+        "<p><br /></p>",
+        "<p>Does not mention prototyping.</p>",
+        "<p>Does not mention preliminary design.</p>",
+        "<p>Does not mention customer involvement.</p>"]
         },
         {
-            "header": "Fifth Edition, 2000",
+            "header": "Pressman, 5th ed., 2000",
             "content": ["<img src='web/images/pressman-fifth-ed-2.jpg' />"]
         },
         {
@@ -112,15 +126,21 @@
         },
         {
             "header": "Takeaway #2",
-            "content": ["<p>By mistake, Royce oversold the the idealized waterfall process by using a simple picture.</p><p class='small'>Not sure what the takeaway is here really :/</p>"]
+            "content": [
+                "<p>By mistake, Royce oversold the the idealized waterfall process by using a simple picture.</p>", 
+                "<p class='small'>Not sure what the takeaway is here really</p>"
+            ]
         },
         {
             "header": "Takeaway #3",
-            "content": ["<p>Check the source.</p><p>And try to make it past page 2.</p>"]
+            "content": [
+                "<p>Check the source.</p>", 
+                "<p class='small'>And try to make it past page 2.</p>"
+            ]
         },
         {
             "header": "Discussion",
-            "content": ["<p>On obsolete software process models</p><p class='small'>Questions about sourdough bread also acceptable</p>"]
+            "content": ["<p>On obsolete software development models</p><p class='small'>Questions about sourdough bread also acceptable</p>"]
         }
     ]
 }
