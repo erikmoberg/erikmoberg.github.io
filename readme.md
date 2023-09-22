@@ -37,3 +37,5 @@ But there are a few takeaways:
 * It appears that the famous Waterfall Model in its commonly understood form does not exist in academic literature. We should not accept statements about this model, or any other model - or tool, for that matter - at face value.
 
 In conclusion, if someone is criticizing you for using a waterfall approach to solve a problem, you may now shamelessly attack them for not knowing an article from 1970 in full detail. Thanks for reading.
+
+https://dl.acm.org/doi/pdf/10.5555/41765.41798
