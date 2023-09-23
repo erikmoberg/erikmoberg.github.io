@@ -26,7 +26,7 @@
                     "<li><cite>Delays testing until the end of the development lifecycle</cite></li>",
                     "<li><cite>When a [design] flaw is found, the entire process often needs to start over</cite></li>",
                 "</ul>",
-                "<p><br><a href='https://www.techtarget.com/searchsoftwarequality/definition/waterfall-model'>TechTarget: Waterfall Model</a></p>"],
+                "<p class='small'><br>Source: <a href='https://www.techtarget.com/searchsoftwarequality/definition/waterfall-model'>TechTarget: Waterfall Model</a></p>"],
             "style": "light"
         },
         {
@@ -65,9 +65,9 @@
             "header": "5 Points to Reduce Risk",
             "content": [
                 "<ol>",
-                    "<li>Program design comes first</li>",
-                    "<li>Document the design</li>",
-                    "<li>Do it twice</li>",
+                    "<li>Design, analyse, then design again</li>",
+                    "<li>Ample documentation</li>",
+                    "<li>Prototype</li>",
                     "<li>Plan, control, and monitor testing</li>",
                     "<li>Involve the customer</li>",
                 "</ol>"
@@ -77,6 +77,14 @@
             "header": "Royce did not recommend the strict waterfall approach.",
             "content": ["He used it as a strawman to explain why it doesn't work."],
             "style": "light"
+        },
+        {
+            "header": "Million Dollar Question",
+            "content": ["Are you allowed to go back?"]
+        },
+        {
+            "header": "Yes.",
+            "content": ["<p class='small'>Just try not doing it too much.</p>"]
         },
         {
             "header": "Conspiracy time",
@@ -102,7 +110,6 @@
             "header": "Pressman, 3rd ed., 1992 (3)",
             "content": [
         "<p><em>Over the past decade, criticism of the paradigm has caused even active supporters to question its applicability</em></p>",
-        "<p><em>A major blunder, if undetected until the working program is reviewed, can be distrastrous</em></p>",
         "<p><br /></p>",
         "<p>Does not mention prototyping.</p>",
         "<p>Does not mention preliminary design.</p>",
@@ -127,7 +134,7 @@
         {
             "header": "Takeaway #2",
             "content": [
-                "<p>By mistake, Royce oversold the the idealized waterfall process by using a simple picture.</p>", 
+                "<p>By mistake, Royce oversold the the idealised waterfall process by using a simple picture.</p>", 
                 "<p class='small'>Not sure what the takeaway is here really</p>"
             ]
         },
