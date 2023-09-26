@@ -19,11 +19,11 @@
             "hideHeader": true
         },
         {
-            "header": "Disadvantages - a Selection",
+            "header": "Bad Characteristics - a Selection",
             "content": [
                 "<ul>", 
                     "<li><cite>Doesn't incorporate midprocess user or client feedback</cite></li>",
-                    "<li><cite>Delays testing until the end of the development lifecycle</cite></li>",
+                    "<li><cite>Endpoints or goals can't be revisited after their completion</cite></li>",
                     "<li><cite>When a [design] flaw is found, the entire process often needs to start over</cite></li>",
                 "</ul>",
                 "<p class='small'><br>Source: <a href='https://www.techtarget.com/searchsoftwarequality/definition/waterfall-model'>TechTarget: Waterfall Model</a></p>"],
@@ -39,7 +39,7 @@
             "content": [
                 "<p class='small'>by Winston W. \"The Rocket Scientist\" Royce</p>",
                 "<p><br /></p>",
-                "<p>11 pages.<br />",
+                "<p>",
                 "Often cited as the original paper on the waterfall model.*</p>",
                 "<p><br /></p>",
                 "<p class='small'>*Never actually calls it the waterfall model.</p>"],
