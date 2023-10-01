@@ -19,7 +19,7 @@
             "hideHeader": true
         },
         {
-            "header": "Bad Characteristics - a Selection",
+            "header": "Shortcomings - a Selection",
             "content": [
                 "<ul>", 
                     "<li><cite>Doesn't incorporate midprocess user or client feedback</cite></li>",
@@ -52,7 +52,9 @@
         },
         {
             "header": "Quote",
-            "content": ["<p><cite>I believe in this concept, but the implementation described above is risky and invites failure.</cite></p><p class='small'>-- Winston W. Royce</p>"],
+            "content": [
+                "<p><cite>I believe in this concept, but the implementation described above is risky and invites failure.</cite></p>",
+                "<p class='small'>— Winston W. Royce</p>"],
             "hideHeader": true,
             "style": "light"
         },
@@ -87,7 +89,7 @@
             "content": ["<p class='small'>Just try not doing it too much.</p>"]
         },
         {
-            "header": "Conspiracy time",
+            "header": "Conspiracy Time",
             "content": [
                 "<p>A recent misunderstanding?</p>",
                 "<p>Or: Was the waterfall intentionally misinterpreted to promote agile??</p>",
