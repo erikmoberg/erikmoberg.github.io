@@ -1,6 +1,6 @@
 # The Waterfall Model does not exist (at least not in the way you might think)
 
-https://erikmoberg.github.io/pres/#the-waterfall-model-does-not-exist
+[Presentation](https://erikmoberg.github.io/pres/#the-waterfall-model-does-not-exist)
 
 Developing software is hard and often chaotic. By using a software development process, there is potential to reduce risks, costs, and enable us to deliver better software. I would like to share the often-cited 1970 article by Winston W. Royce on an early model for software development, namely the humble [Waterfall Model](http://www-scf.usc.edu/~csci201/lectures/Lecture11/royce1970.pdf). While many people seem to think to have a good grasp of what it is, and why it is absolutely terrible, the model seems often to be fundamentally misunderstood.
 
