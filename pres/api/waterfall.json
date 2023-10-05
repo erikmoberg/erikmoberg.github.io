@@ -102,14 +102,10 @@
         },
         {
             "header": "Pressman, 3rd ed., 1992 (1)",
-            "content": ["<img src='web/images/pressman-waterfall.png' />"]
-        },
-        {
-            "header": "Pressman, 3rd ed., 1992 (2)",
             "content": ["<img src='web/images/pressman-third-ed.png' />"]
         },
         {
-            "header": "Pressman, 3rd ed., 1992 (3)",
+            "header": "Pressman, 3rd ed., 1992 (2)",
             "content": [
         "<p><em>Over the past decade, criticism of the paradigm has caused even active supporters to question its applicability</em></p>",
         "<p><br /></p>",
